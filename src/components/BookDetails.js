@@ -10,7 +10,7 @@ export default function BookDetails({ hotel, checkIn = '', checkOut = '' }) {
   const [endDate, setEndDate] =  useState(checkOut);
 
   return (
-    <Paper>
+    <Paper sx={{padding: '10px'}}>
       <Grid
         container
         direction="row"

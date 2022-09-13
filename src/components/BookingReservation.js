@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import ChangeButton from './ChangeButton';
 import Button from '@mui/material/Button';
 import Context from '../context/Context';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 export default function BookingReservation({ booking: { hotel, checkIn, checkOut, id} }) {
   const { bookings, setBookings } = useContext(Context);
@@ -18,7 +19,7 @@ export default function BookingReservation({ booking: { hotel, checkIn, checkOut
   };
 
   return (
-    <Paper>
+    <Paper sx={{padding: '10px'}}>
       <Grid
         container
         direction="row"
@@ -57,7 +58,7 @@ export default function BookingReservation({ booking: { hotel, checkIn, checkOut
           sx={{ marginLeft: '10px'}}
           onClick={cancelReservation}
           > 
-          Cancel Reservation
+          <HighlightOffIcon /> Cancel Reservation
         </Button>
       </Grid>
     </Paper>

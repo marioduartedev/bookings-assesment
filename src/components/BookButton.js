@@ -50,9 +50,8 @@ export default function BookButton({ startDate, endDate, hotel}) {
     {!open && 
       <Button 
         size="large" 
-        variant="contained"
         onClick={validate}
-        sx={{ marginLeft: '10px'}}
+        sx={{ marginLeft: '10px', marginTop: '5px'}}
       >
         Book Now
       </Button>

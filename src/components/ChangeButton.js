@@ -4,6 +4,7 @@ import Collapse from '@mui/material/Collapse';
 import Button from '@mui/material/Button';
 import Context from '../context/Context';
 import { dateIsValid } from './dateIsValid';
+import PublishedWithChangesIcon from '@mui/icons-material/PublishedWithChanges';
 
 export default function ChangeButton({ startDate, endDate, hotel, id}) {
   const { bookings, setBookings } = useContext(Context);
@@ -50,11 +51,10 @@ export default function ChangeButton({ startDate, endDate, hotel, id}) {
     {!open && 
       <Button 
         size="large" 
-        variant="contained"
         onClick={validate}
-        sx={{ marginLeft: '10px'}}
+        sx={{ marginLeft: '10px', marginTop: '5px'}}
       >
-        Change Dates
+        <PublishedWithChangesIcon /> Change Dates
       </Button>
     }
     <Collapse in={open}>

@@ -12,7 +12,7 @@ export default function Bookings() {
       <div className='App'>
         <Header />
         {bookings.map((booking, index) => 
-          <div key={index}>
+          <div key={index} style={{marginBottom: '15px'}}>
             <BookingReservation  booking={booking} />
           </div>
         )}

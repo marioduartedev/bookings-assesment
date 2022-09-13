@@ -2,7 +2,9 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom";
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 export default function Header() {
   const location = useLocation();
@@ -19,7 +21,7 @@ export default function Header() {
           component={Link}
           to="/"
         >
-          Back Home Page
+          <ManageSearchIcon /> Find Hotel
         </Button> 
       }
       {
@@ -30,7 +32,7 @@ export default function Header() {
           component={Link}
           to="/bookings"
         >
-          View your bookings
+          <CalendarMonthIcon /> Bookings
         </Button> 
       }
 
